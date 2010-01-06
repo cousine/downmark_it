@@ -1,18 +1,18 @@
-# =Overview
-# DownmarkIt is a library to convert HTML to markdown, based on Hpricot[http://github.com/hpricot/hpricot/].
-#
-# =Motivation
-# While working on our company's new CMS, I needed to parse HTML back to markdown and surprisngly there wasn't any solution that could fit our enviroment, so I decided to make my own and share it :)
-# 
-# =Usage
-# Make sure you install Hpricot[http://github.com/hpricot/hpricot/] first, then require the library in your application, if you are using the library in a rails application, just place it in your lib folder, then use this method to convert HTML into markdown.
-#  markdown = DownmarkIt.to_markdown(html)
-# 
-# =Features
-# This library supports variable header tags, horizontal rulers, emphasis, strong, links, images, blockqoutes, code, unordered lists(nested) and ordered lists(nested)
-# 
-# =WARNING
-# Currently DownmarkIt does not support ul tags inside ol tags or vice versa, maybe in the future i will add it ;)
-#
-# =License
-# This code is licensed under MIT License
+=Overview
+DownmarkIt is a library to convert HTML to markdown, based on Hpricot[http://github.com/hpricot/hpricot/].
+
+=Motivation
+While working on our company's new CMS, I needed to parse HTML back to markdown and surprisngly there wasn't any solution that could fit our enviroment, so I decided to make my own and share it :)
+ 
+=Usage
+Make sure you install Hpricot[http://github.com/hpricot/hpricot/] first, then require the library in your application, if you are using the library in a rails application, just place it in your lib folder, then use this method to convert HTML into markdown.
+markdown = DownmarkIt.to_markdown(html)
+
+=Features
+This library supports variable header tags, horizontal rulers, emphasis, strong, links, images, blockqoutes, code, unordered lists(nested) and ordered lists(nested)
+ 
+=WARNING
+Currently DownmarkIt does not support ul tags inside ol tags or vice versa, maybe in the future i will add it ;)
+
+=License
+This code is licensed under MIT License
