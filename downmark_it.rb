@@ -27,7 +27,7 @@ module DownmarkIt
 		(raw/"/<h\d>/").each do |header|
 			if(header.name.match(/^h\d$/))
 				header_level = header.name.match(/\d/).to_s.to_i
-				header.swap("#{"#" * header_level} #{header.inner_html}")
+				header.swap("#{"#" * header_level} #{header.inner_html}\r\n")
 			end
 		end
 		
@@ -120,7 +120,7 @@ module DownmarkIt
 		# lines
 		(raw /"p").each do |p|
 			if p.name == "p"
-				p.swap("\r\n\r\n#{p.inner_text}")
+				p.swap("\r\n#{p.inner_text}\r\n")
 			end
 		end
 		
