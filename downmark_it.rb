@@ -9,7 +9,7 @@
 #  markdown = DownmarkIt.to_markdown(html)
 # 
 # =Features
-# This library supports variable header tags, horizontal rulers, emphasis, strong, links, images, blockqoutes, code, unordered lists(nested) and ordered lists(nested)
+# This library supports variable header tags, horizontal rulers, emphasis, strong, links, images, blockquotes, code, unordered lists(nested) and ordered lists(nested)
 # 
 # =WARNING
 # Currently DownmarkIt does not support ul tags inside ol tags or vice versa, maybe in the future i will add it ;)
@@ -66,9 +66,9 @@ module DownmarkIt
 			image.swap("![#{image['alt']}](#{image['src']}#{" \"#{image['title']}\"" if image['title']})")
 		end
 		
-		# blockqoute
-		(raw/"blockqoute").each do |qoute|
-			if qoute.name == "blockqoute"
+		# blockquote
+		(raw/"blockquote").each do |qoute|
+			if qoute.name == "blockquote"
 				qoute.swap("> #{nested_qoute(qoute)}")
 			end
 		end
@@ -129,7 +129,7 @@ module DownmarkIt
 	
 	private
 	def self.nested_qoute(qoute)
-		nqoute = qoute.at("blockqoute")
+		nqoute = qoute.at("blockquote")
 		unless(nqoute.nil?)
 			nnqoute = nested_qoute(nqoute)
 			"> #{nnqoute}"
